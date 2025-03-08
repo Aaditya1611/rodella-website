@@ -9,7 +9,7 @@ import homepagedrone from "../assets/images/homepagedrone.png";
 import MQ650LV from "../assets/images/MQ650LV.jpg";
 import ServiceImg2 from "../assets/images/ServiceImg2.png";
 import design from "../assets/images/design.jpg";
-// Sample blog data - you can replace this with your actual blog data
+// Sample blog data - you can replace this with your actual blog data // this is the past works page
 const blogPosts = [
     {
       id: 1,
