@@ -120,11 +120,11 @@ const industrialApplications = [
 
 const GCS = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
+      <section className="relative h-screen flex items-center w-full overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover brightness-30 -z-10"
           src={gcsVideo}
@@ -133,12 +133,12 @@ const GCS = () => {
           loop
           playsInline
         ></video>
-        <div className="container mx-auto px-4 z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl tracking-wide text-white font-bold animate-fade-in">
               Ground Control Station
             </h1>
-            <p className="text-2xl sm:text-3xl text-neutral-300 mt-6 tracking-wide">
+            <p className="text-xl sm:text-2xl md:text-3xl text-neutral-300 mt-4 sm:mt-6 tracking-wide">
               Mission-Critical Flight Simplified
             </p>
           </div>
@@ -146,24 +146,19 @@ const GCS = () => {
       </section>
 
       {/* New Flight Data Management Infographic Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* <img
-          src={imgess}
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-20 -z-10"
-          alt="background"
-        /> */}
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold text-white text-center mb-16"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12 sm:mb-16"
           >
             Flight Data Management
           </motion.h2>
 
-          <div className="relative max-w-4xl mx-auto mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-1">
+          <div className="relative max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {dataManagementFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.id}
@@ -171,93 +166,37 @@ const GCS = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                  className="relative bg-[#0A192F]/80 backdrop-blur-sm p-6 rounded-lg text-center"
+                  className="relative bg-[#0A192F]/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg text-center h-full"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-neutral-300">
+                  <p className="text-sm sm:text-base text-neutral-300">
                     {feature.description}
                   </p>
                 </motion.div>
               ))}
             </div>
           </div>
-
-          {/* Additional Information */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <p className="text-neutral-300 mb-8 backdrop-blur-sm">
-              Our advanced cloud-based system ensures your mission data is
-              always secure, accessible, and shareable across your entire team.
-              Enhance operational efficiency by leveraging historical data and
-              proven flight parameters.
-            </p>
-
-            {/* Key Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                "Enhanced Reliability",
-                "Team Collaboration",
-                "Mission Efficiency",
-              ].map((title, index) => (
-                <motion.div
-                  key={title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                  className="bg-[#0A192F]/80 backdrop-blur-sm p-4 rounded-lg"
-                >
-                  <h4 className="text-white font-bold mb-2">{title}</h4>
-                  <p className="text-sm text-neutral-300">
-                    {index === 0 &&
-                      "Redundant cloud backup ensures no data loss"}
-                    {index === 1 &&
-                      "Share mission data instantly with team members"}
-                    {index === 2 && "Duplicate successful flight parameters"}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
-
-        {/* Animated Background Decorative Elements */}
-        <motion.div
-          animate={{
-            rotate: 360,
-            transition: { duration: 20, repeat: Infinity, ease: "linear" },
-          }}
-          className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        >
-          <div className="absolute top-1/4 left-10 w-20 h-20 border-2 border-blue-400 rounded-full opacity-10"></div>
-          <div className="absolute bottom-1/4 right-10 w-32 h-32 border-2 border-blue-400 rounded-full opacity-10"></div>
-        </motion.div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 relative">
-        {/* <img
-          src={imgess}
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-10"
-          alt="background"
-        /> */}
-        <div className="container mx-auto px-4 relative z-10">
+      <section
+        id="features"
+        className="py-16 sm:py-20 lg:py-24 relative overflow-hidden w-full"
+      >
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold text-white text-center mb-16"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12 sm:mb-16"
           >
             Key Features
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.id}
@@ -265,13 +204,15 @@ const GCS = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                className="bg-[#112240]/80 backdrop-blur-sm p-8 rounded-lg"
+                className="bg-[#112240]/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg h-full"
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-4">
+                <div className="text-3xl sm:text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-300">{feature.description}</p>
+                <p className="text-sm sm:text-base text-neutral-300">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -279,37 +220,26 @@ const GCS = () => {
       </section>
 
       {/* Industrial Applications Section */}
-      <section className="py-20 relative min-h-screen flex items-center">
-        {/* Background Image */}
-        <img
-          src={imgess}
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-20 -z-10"
-          alt="Drone operator planning"
-        />
-
-        {/* Content Container */}
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            {/* Header Content */}
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
             >
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8">
                 Industrial Applications
               </h2>
-              <p className="text-lg sm:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
                 Our GCS Pro revolutionizes drone operations across industries.
                 With just a few taps, create complex flight routes and execute
-                missions with unprecedented precision and reliability. Perfect
-                for professionals who demand excellence in every flight.
+                missions with unprecedented precision and reliability.
               </p>
             </motion.div>
 
-            {/* Industry Icons Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
               {industrialApplications.map((app, index) => (
                 <motion.div
                   key={index}
@@ -323,37 +253,36 @@ const GCS = () => {
                   className="group"
                 >
                   <div
-                    className="bg-[#0A192F]/80 backdrop-blur-sm p-6 rounded-lg text-center 
+                    className="bg-[#0A192F]/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg text-center 
                                 border border-transparent hover:border-blue-500 transition-all duration-300
-                                h-full flex flex-col items-center justify-between min-h-[200px]"
+                                h-full flex flex-col items-center justify-between min-h-[180px] sm:min-h-[200px]"
                   >
-                    {/* Icon Circle */}
                     <div
-                      className="w-16 h-16 rounded-full bg-blue-500/10 
+                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-500/10 
                                   flex items-center justify-center group-hover:bg-blue-500/20 
                                   transition-all duration-300 mb-4"
                     >
-                      <span className="text-3xl">{app.icon}</span>
+                      <span className="text-2xl sm:text-3xl">{app.icon}</span>
                     </div>
 
-                    {/* Content Container */}
                     <div className="flex flex-col flex-grow">
-                      {/* Title */}
-                      <h3 className="text-white font-bold text-lg mb-2">
+                      <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg mb-2">
                         {app.title}
                       </h3>
+                      <p className="text-neutral-400 text-xs sm:text-sm hidden sm:block">
+                        {app.description}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Additional Features */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-16 text-center"
+              className="mt-12 sm:mt-16 text-center"
             >
               <div className="inline-block bg-blue-500/10 backdrop-blur-sm px-6 py-3 rounded-full">
                 <p className="text-blue-400 text-sm sm:text-base">
@@ -362,35 +291,6 @@ const GCS = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <motion.div
-            animate={{
-              opacity: [0.1, 0.2, 0.1],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            className="absolute top-1/4 left-10 w-32 h-32 border border-blue-400 rounded-full"
-          />
-          <motion.div
-            animate={{
-              opacity: [0.1, 0.2, 0.1],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: 1,
-            }}
-            className="absolute bottom-1/4 right-10 w-48 h-48 border border-blue-400 rounded-full"
-          />
         </div>
       </section>
     </div>
