@@ -58,6 +58,11 @@ export const Menus = [
     name: "Past Works",
     href: "/blog",
   },
+  {
+    id: 4,
+    name: "GCS",
+    href: "/gcs",
+  },
 
   {
     id: 4,
