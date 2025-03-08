@@ -15,6 +15,3 @@
       @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] bg-black;
     }
   }
-
-/* .flex-center == flex items-center */
-/*  .flex-center-between == flex items-center justify-between */
