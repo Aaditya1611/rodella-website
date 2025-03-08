@@ -13,6 +13,7 @@ import Engineering from "./pages/Engineering";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import AircraftPageBGItem from "./components/AircraftPageBGItems";
+import GCS from "./pages/GCS";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/gcs" element={<GCS />} />
         </Routes>
         <Footer />
       </div>
