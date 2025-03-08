@@ -12,6 +12,7 @@ import FixedWing from "./components/FixedWing";
 import Engineering from "./pages/Engineering";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import GCS from "./pages/GCS";  
 import AircraftPageBGItem from "./components/AircraftPageBGItems";
 import EngPageDesignSection from "./components/SmallerScreen/EngPgDesignSec";
 import EngPageSimulationSection from "./components/SmallerScreen/EngPgSimulationSec";
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/simulation" element={<EngPageSimulationSection />} />
           <Route path="/prototype" element={<EngPagePrototypeSection />} />
           <Route path="/airframe" element={<EngPageAirframeSection />} />
+          <Route path="/gcs" element={<GCS />} />
         </Routes>
         <Footer />
       </div>
