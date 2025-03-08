@@ -145,43 +145,6 @@ const GCS = () => {
         </div>
       </section>
 
-      {/* New Flight Data Management Infographic Section */}
-      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden w-full">
-        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12 sm:mb-16"
-          >
-            Flight Data Management
-          </motion.h2>
-
-          <div className="relative max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              {dataManagementFeatures.map((feature, index) => (
-                <motion.div
-                  key={feature.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                  className="relative bg-[#0A192F]/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg text-center h-full"
-                >
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-neutral-300">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Grid */}
       <section
         id="features"
@@ -219,78 +182,71 @@ const GCS = () => {
         </div>
       </section>
 
-      {/* Industrial Applications Section */}
+      {/* Contact CTA Section */}
       <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-12 sm:mb-16"
+              className="bg-[#112240]/80 backdrop-blur-sm rounded-lg p-8 sm:p-12 border border-blue-500/20"
             >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8">
-                Industrial Applications
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+                Need a Custom Build GCS ?
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                Our GCS Pro revolutionizes drone operations across industries.
-                With just a few taps, create complex flight routes and execute
-                missions with unprecedented precision and reliability.
+              <p className="text-neutral-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                Let's discuss your specific requirements and create a tailored
+                Ground Control Solution for your drone operations.
               </p>
-            </motion.div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
-              {industrialApplications.map((app, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.2 },
-                  }}
-                  className="group"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 text-base sm:text-lg 
+                         bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-all duration-300
+                         transform hover:scale-105 group"
+              >
+                Contact Us
+                <motion.span
+                  className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  whileHover={{ x: 5 }}
                 >
-                  <div
-                    className="bg-[#0A192F]/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg text-center 
-                                border border-transparent hover:border-blue-500 transition-all duration-300
-                                h-full flex flex-col items-center justify-between min-h-[180px] sm:min-h-[200px]"
-                  >
-                    <div
-                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-500/10 
-                                  flex items-center justify-center group-hover:bg-blue-500/20 
-                                  transition-all duration-300 mb-4"
-                    >
-                      <span className="text-2xl sm:text-3xl">{app.icon}</span>
-                    </div>
-
-                    <div className="flex flex-col flex-grow">
-                      <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg mb-2">
-                        {app.title}
-                      </h3>
-                      <p className="text-neutral-400 text-xs sm:text-sm hidden sm:block">
-                        {app.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-12 sm:mt-16 text-center"
-            >
-              <div className="inline-block bg-blue-500/10 backdrop-blur-sm px-6 py-3 rounded-full">
-                <p className="text-blue-400 text-sm sm:text-base">
-                  Compatible with all major drone platforms and cameras
-                </p>
-              </div>
+                  
+                </motion.span>
+              </Link>
             </motion.div>
+
+           
           </div>
+        </div>
+
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div
+            animate={{
+              opacity: [0.1, 0.2, 0.1],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{
+              opacity: [0.1, 0.2, 0.1],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              delay: 1,
+            }}
+            className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          />
         </div>
       </section>
     </div>
