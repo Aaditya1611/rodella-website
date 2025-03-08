@@ -13,7 +13,10 @@ import Engineering from "./pages/Engineering";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import AircraftPageBGItem from "./components/AircraftPageBGItems";
-import GCS from "./pages/GCS";
+import EngPageDesignSection from "./components/SmallerScreen/EngPgDesignSec";
+import EngPageSimulationSection from "./components/SmallerScreen/EngPgSimulationSec";
+import EngPagePrototypeSection from "./components/SmallerScreen/EngPgPrototypeSec";
+import EngPageAirframeSection from "./components/SmallerScreen/EngPgAirframeSec";
 
 const App = () => {
   return (
@@ -31,7 +34,10 @@ const App = () => {
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/gcs" element={<GCS />} />
+          <Route path="/design" element={<EngPageDesignSection />} />
+          <Route path="/simulation" element={<EngPageSimulationSection />} />
+          <Route path="/prototype" element={<EngPagePrototypeSection />} />
+          <Route path="/airframe" element={<EngPageAirframeSection />} />
         </Routes>
         <Footer />
       </div>
