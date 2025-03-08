@@ -20,10 +20,10 @@ const Homepage = () => {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center text-center max-w-7xl mx-auto">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl tracking-wide text-white font-bold animate-fade-in">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl tracking-wide text-white animate-fade-in">
                 rodella
               </h1>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide text-white mt-3 sm:mt-4 lg:mt-5 font-semibold">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide text-white mt-3 sm:mt-4 lg:mt-5">
                 AEROSPACE LABS
               </h2>
 
