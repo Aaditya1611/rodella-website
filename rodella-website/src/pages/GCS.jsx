@@ -121,10 +121,12 @@ const industrialApplications = [
 const GCS = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Navbar />
+     
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center w-full overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden pt-2">
+      <Navbar />
+      <div className="flex items-center h-full">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover brightness-30 -z-10"
           src={gcsVideo}
@@ -142,6 +144,7 @@ const GCS = () => {
               Mission-Critical Flight Simplified
             </p>
           </div>
+        </div>
         </div>
       </section>
 
