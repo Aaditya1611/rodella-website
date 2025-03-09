@@ -9,6 +9,7 @@ import HorizontalScrollCarousel from "../components/HorizontalScrollCarousel";
 import { ArrowUp, Route } from "lucide-react";
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -68,35 +69,50 @@ const Engineering = () => {
 
 
                     <div className="text-white mt-10 lg:flex lg:flex-row justify-center items-center lg:gap-10 flex flex-col hidden">
-                        {/* <div className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer"
-                        onClick={() => scrollToSection(section1Ref)}
-                    >
-                        Design</div> */}
-                        <div className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer inline-block"
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            whileHover={{ scale: 1.07, transition: { duration: 0.2 } }}
+                            className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer"
                             onClick={() => scrollToSection(section2Ref)}
                         >
-                            Prototyping</div>
-                        <div className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer inline-block"
+                            Prototyping
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            whileHover={{ scale: 1.07, transition: { duration: 0.2 } }}
+                            className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer"
                             onClick={() => scrollToSection(section3Ref)}
                         >
-                            Simulation</div>
-                        <div className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer inline-block"
+                            Simulation
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            whileHover={{ scale: 1.07, transition: { duration: 0.2 } }}
+                            className="text-xl border-2 border-neutral-500 bg-black mb-5 rounded-full px-5 py-2 text-white cursor-pointer"
                             onClick={() => scrollToSection(section4Ref)}
                         >
-                            Airframe Integration</div>
+                            Airframe Integration</motion.div>
                     </div>
 
                     <div className="text-white px-20 lg:hidden py-10">
-                            <Slider {...settings}>
+                        <Slider {...settings}>
                             {SectionLinkForSmallScreens.map((d) => (
                                 <div key={d.name} className="text-center py-30">
-                                    
+
                                     <Link to={d.url} className="text-black rounded-full px-3 py-2 text-xl bg-white inline-block">{d.name}</Link>
-                                    
+
                                 </div>
                             ))}
-                            </Slider>
-                            <p className="text-neutral-400 text-center mt-5 lg:text-xl text-lg text-wrap">All our Drones are designed and developed in house.</p>
+                        </Slider>
+                        <p className="text-neutral-400 text-center mt-5 lg:text-xl text-lg text-wrap">All our Drones are designed and developed in house.</p>
                     </div>
 
 
@@ -120,40 +136,67 @@ const Engineering = () => {
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="my-3 lg:text-3xl text-xl text-neutral-200">3D Modeling</h2>
                         <div className="flex flex-col lg:flex-row">
-                            <p className="mr-0 text-lg text-neutral-400 lg:mr-5 lg:text-xl">
+                            <motion.p 
+                             initial={{ opacity: 0, y: 20 }}
+                             whileInView={{ opacity: 1, y: 0 }}
+                             transition={{ duration: 0.3 }}
+                            className="mr-0 text-lg text-neutral-400 lg:mr-5 lg:text-xl">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id placeat esse pariatur porro,
                                 quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                            <img src={DesignImg1} className="mt-4 lg:mt-0 lg:h-100 lg:max-w-1/2 rounded-lg" alt="Design Image 1" />
+                            </motion.p>
+                            
+                                
+                                <motion.img src={DesignImg1} 
+                                  initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                                  whileInView={{ opacity: 1, x: 0 }}
+                                  transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                                className="mt-4 lg:mt-0 lg:h-100 lg:max-w-1/2 rounded-lg" alt="Design Image 1" />
+                           
                         </div>
                     </div>
 
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="lg:text-3xl text-xl text-neutral-200 my-5">Aerodynamic Analysis</h2>
                         <div className="flex lg:flex-row flex-col">
-                            <img src={DesignImg2} className="lg:h-100 lg:max-w-1/2 mb-4 rounded-lg" alt="Design Image 2"></img>
-                            <p className="lg:text-xl text-neutral-400 lg:ml-5 mr-0 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <motion.img src={DesignImg2} 
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            className="lg:h-100 lg:max-w-1/2 mb-4 rounded-lg" alt="Design Image 2"/>
+                            <motion.p 
+                             initial={{ opacity: 0, y: 20 }}
+                             whileInView={{ opacity: 1, y: 0 }}
+                             transition={{ duration: 0.3 }}
+                            className="lg:text-xl text-neutral-400 lg:ml-5 mr-0 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Id placeat esse pariatur porro, quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+                            </motion.p>
                         </div>
                     </div>
 
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="lg:text-3xl text-xl text-neutral-200 my-3">Material Selection</h2>
                         <div className="flex flex-col lg:flex-row">
-                            <p className="lg:text-xl text-neutral-400 lg:mr-5 text-lg mr-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <motion.p 
+                             initial={{ opacity: 0, y: 20 }}
+                             whileInView={{ opacity: 1, y: 0 }}
+                             transition={{ duration: 0.3 }}
+                            className="lg:text-xl text-neutral-400 lg:mr-5 text-lg mr-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Id placeat esse pariatur porro, quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                            <img src={DesignImg1} className="lg:h-100 mt-4 lg:mt-0 lg:max-w-1/2 rounded-lg" alt="Design Image 3"></img>
+                            </motion.p>
+                            <motion.img src={DesignImg1} 
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            className="lg:h-100 mt-4 lg:mt-0 lg:max-w-1/2 rounded-lg" alt="Design Image 3"/>
                         </div>
                     </div>
                 </section>
@@ -168,26 +211,46 @@ const Engineering = () => {
                         The products are pushed to extreme tests to determine the maximum operational abilities of each drone
                     </p>
                     <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:px-30 md:grid-cols-2 px-3">
-                        <div className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
+                        <motion.div 
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                            className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
                             <img src={PrototypeImg1} className="h-130 object-cover rounded-lg" alt="Prototype Image 1"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Prototype Construction</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
-                        </div>
-                        <div className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
+                        </motion.div>
+                        <motion.div 
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                            className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
                             <img src={PrototypeImg1} className="h-130 object-cover rounded-lg" alt="Prototype Image 2"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Component testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Each individual components (motors, ESCs, batteries) are tested vigorously for performance and reliability.</p> */}
-                        </div>
-                        <div className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
+                        </motion.div>
+                        <motion.div 
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                            className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
                             <img src={PrototypeImg2} className="h-130 object-cover rounded-lg" alt="Prototype Image 3"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Ground testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
-                        </div>
-                        <div className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
+                        </motion.div>
+                        <motion.div 
+                        initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                        whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                        className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
                             <img src={PrototypeImg3} className="h-130 object-cover rounded-lg" alt="Prototype Image 4"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Flight testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Multiple flight tests are conducted in controlled environment to evaluate stability, performance and control of the aircraft</p> */}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
