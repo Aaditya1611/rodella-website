@@ -136,41 +136,41 @@ const Engineering = () => {
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="my-3 lg:text-3xl text-xl text-neutral-200">3D Modeling</h2>
                         <div className="flex flex-col lg:flex-row">
-                            <motion.p 
-                             initial={{ opacity: 0, y: 20 }}
-                             whileInView={{ opacity: 1, y: 0 }}
-                             transition={{ duration: 0.3 }}
-                            className="mr-0 text-lg text-neutral-400 lg:mr-5 lg:text-xl">
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="mr-0 text-lg text-neutral-400 lg:mr-5 lg:text-xl">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id placeat esse pariatur porro,
                                 quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </motion.p>
-                            
-                                
-                                <motion.img src={DesignImg1} 
-                                  initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
-                                  whileInView={{ opacity: 1, x: 0 }}
-                                  transition={{ duration: 0.6, delay: 1 * 0.1 }}
+
+
+                            <motion.img src={DesignImg1}
+                                initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 1 * 0.1 }}
                                 className="mt-4 lg:mt-0 lg:h-100 lg:max-w-1/2 rounded-lg" alt="Design Image 1" />
-                           
+
                         </div>
                     </div>
 
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="lg:text-3xl text-xl text-neutral-200 my-5">Aerodynamic Analysis</h2>
                         <div className="flex lg:flex-row flex-col">
-                            <motion.img src={DesignImg2} 
-                            initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
-                            className="lg:h-100 lg:max-w-1/2 mb-4 rounded-lg" alt="Design Image 2"/>
-                            <motion.p 
-                             initial={{ opacity: 0, y: 20 }}
-                             whileInView={{ opacity: 1, y: 0 }}
-                             transition={{ duration: 0.3 }}
-                            className="lg:text-xl text-neutral-400 lg:ml-5 mr-0 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <motion.img src={DesignImg2}
+                                initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                                className="lg:h-100 lg:max-w-1/2 mb-4 rounded-lg" alt="Design Image 2" />
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="lg:text-xl text-neutral-400 lg:ml-5 mr-0 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Id placeat esse pariatur porro, quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
@@ -182,21 +182,21 @@ const Engineering = () => {
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="lg:text-3xl text-xl text-neutral-200 my-3">Material Selection</h2>
                         <div className="flex flex-col lg:flex-row">
-                            <motion.p 
-                             initial={{ opacity: 0, y: 20 }}
-                             whileInView={{ opacity: 1, y: 0 }}
-                             transition={{ duration: 0.3 }}
-                            className="lg:text-xl text-neutral-400 lg:mr-5 text-lg mr-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="lg:text-xl text-neutral-400 lg:mr-5 text-lg mr-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Id placeat esse pariatur porro, quidem necessitatibus veniam at aspernatur!
                                 Eaque rem non iusto et id! Facere molestiae laudantium dolorum.
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </motion.p>
-                            <motion.img src={DesignImg1} 
-                            initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
-                            className="lg:h-100 mt-4 lg:mt-0 lg:max-w-1/2 rounded-lg" alt="Design Image 3"/>
+                            <motion.img src={DesignImg1}
+                                initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                                className="lg:h-100 mt-4 lg:mt-0 lg:max-w-1/2 rounded-lg" alt="Design Image 3" />
                         </div>
                     </div>
                 </section>
@@ -211,7 +211,7 @@ const Engineering = () => {
                         The products are pushed to extreme tests to determine the maximum operational abilities of each drone
                     </p>
                     <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:px-30 md:grid-cols-2 px-3">
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -221,7 +221,7 @@ const Engineering = () => {
                             <h1 className="text-2xl text-neutral-300 mt-5">Prototype Construction</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
                         </motion.div>
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -231,7 +231,7 @@ const Engineering = () => {
                             <h1 className="text-2xl text-neutral-300 mt-5">Component testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Each individual components (motors, ESCs, batteries) are tested vigorously for performance and reliability.</p> */}
                         </motion.div>
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -241,12 +241,12 @@ const Engineering = () => {
                             <h1 className="text-2xl text-neutral-300 mt-5">Ground testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
                         </motion.div>
-                        <motion.div 
-                        initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 1 * 0.1 }}
-                        whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                        className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
+                        <motion.div
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 * 0.1 }}
+                            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                            className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
                             <img src={PrototypeImg3} className="h-130 object-cover rounded-lg" alt="Prototype Image 4"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Flight testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Multiple flight tests are conducted in controlled environment to evaluate stability, performance and control of the aircraft</p> */}
@@ -268,12 +268,19 @@ const Engineering = () => {
                     <div className="lg:px-20 max-w-full mt-10 px-3">
                         <img src={DesignImg2} className="lg:h-150 w-full object-cover rounded-lg" alt="Airframe Integration Image"></img>
                     </div>
-                    <div className="lg:px-20 my-10 px-3">
 
-                        <div className="flex flex-col lg:flex-row md:flex-row justify-between">
+                    <motion.div 
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                    className="lg:px-20 my-10 px-3">
+                        <div 
+                        className="flex flex-col lg:flex-row md:flex-row justify-between">
                             <div>
                                 <h2 className="lg:text-3xl text-white text-lg">Component Placement & Mounting</h2>
-                                <ul className="list-disc ml-5 lg:text-xl text-neutral-400 mt-5">
+                                <ul 
+                                
+                                className="list-disc ml-5 lg:text-xl text-neutral-400 mt-5">
                                     <li>Strategic Placement:</li>
                                     <li>Secure Mounting:</li>
                                     <li>Vibration Isolation:</li>
@@ -307,12 +314,17 @@ const Engineering = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                     <div className="w-full flex items-center justify-center cursor-pointer" onClick={() => scrollToSection(section0Ref)}>
-                        <h2 className="text-white lg:text-3xl text-lg text-center mt-30 border-[2px] inline-flex px-6 py-3 rounded-full items-center justify-center">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            whileHover={{ scale: 1.07, transition: { duration: 0.2 } }}
+                            className="text-white lg:text-3xl text-lg text-center mt-30 border-[2px] inline-flex px-6 py-3 rounded-full items-center justify-center">
                             Go Back
                             <ArrowUp size={30} color="white" />
-                        </h2>
+                        </motion.h2>
                     </div>
                 </section>
             </main>
