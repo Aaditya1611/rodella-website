@@ -11,12 +11,15 @@ import { Link } from "react-router-dom";
 
 const Aircrafts = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState('fade-in');
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % AirCraftData.length
-      );
+      setAnimationClass('fade-out');
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % AirCraftData.length);
+        setAnimationClass('fade-in');
+      }, 800); // Animation duration
     }, 5000);
     return () => clearInterval(interval);
   }, [AirCraftData.length]);
@@ -27,7 +30,7 @@ const Aircrafts = () => {
         <Navbar />
         <img
           src={AirCraftData[currentImageIndex].AircraftPageImg}
-          className="absolute top-0 left-0 w-full h-full -z-50 object-cover brightness-30"
+          className={`absolute top-0 left-0 w-full h-full -z-50 object-cover brightness-30 transition-opacity ${animationClass}`}
           alt="Aircraft showcase"
         />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col h-full justify-between">
