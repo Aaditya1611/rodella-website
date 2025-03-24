@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "../components/Navbar.jsx";
 import HomePageVideo from "./../assets/videos/pkv3.mp4";
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -32,19 +33,19 @@ const Homepage = () => {
               </p>
 
               <div className="flex flex-col items-center w-full max-w-xs sm:max-w-sm mt-8 sm:mt-10 space-y-4">
-                <a
-                  href="/aircrafts"
+                <Link
+                  to="/aircrafts"
                   className="text-white bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300 px-6 py-3 rounded-md text-lg sm:text-xl w-full text-center opacity-90 hover:opacity-100"
                 >
                   Aircrafts
-                </a>
+                </Link>
 
-                <a
-                  href="/engineering"
+                <Link
+                  to="/engineering"
                   className="text-white bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300 px-6 py-3 rounded-md text-lg sm:text-xl w-full text-center opacity-90 hover:opacity-100"
                 >
                   Engineering
-                </a>
+                </Link>
               </div>
             </div>
           </div>
