@@ -1,0 +1,64 @@
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide scrollbars initially */
+    display: flex;
+    align-items: center;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Optional: Snap items to the viewport */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    padding: 20px 0;
+  }
+  
+  .gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+  
+  .gallery {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .gallery-item {
+    width: 300px; /* Adjust image width */
+    height: auto;
+    margin-right: 20px; /* Spacing between images */
+    scroll-snap-align: start; /* Optional: Snap to the start of each item */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-item:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the gallery */
+    border-radius: 5px;
+  }
+  
+  .left-button {
+    left: 10px;
+  }
+  
+  .right-button {
+    right: 10px;
+  }
+  
+  .scroll-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }

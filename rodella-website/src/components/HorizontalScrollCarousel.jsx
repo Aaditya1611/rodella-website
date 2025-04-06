@@ -2,31 +2,54 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import cards from "../constants/EngineeringSimulationData";
 
-const HorizontalScrollCarousel = () => {  //currently in use at the Engineering page Simulation section 
+// const HorizontalScrollCarousel = () => {  //currently in use at the Engineering page Simulation section 
 
+//     const targetRef = useRef(null);
+//     const { scrollYProgress } = useScroll({
+//         target: targetRef,
+//     });
+//     const x = useTransform(scrollYProgress, [1, 0], ["-95%", "1%"]);
+//     return (
+//         <section ref={targetRef} className="relative h-[300vh] bg-neutral-900 rounded-lg">
+//             <div className="sticky top-0 flex h-screen items-end overflow-hidden">
+//                 <motion.div style={{ x }} className="flex gap-4">
+//                     {cards.map((card) => {
+//                         return <Card card={card} key={card.id} />;
+//                     })}
+//                 </motion.div>
+//             </div>
+//         </section>
+//     );
+// };
+
+const VerticalScrollCarousel = () => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
-        target: targetRef,
+      target: targetRef,
     });
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  
     return (
-        <section ref={targetRef} className="relative h-[300vh] bg-neutral-900 rounded-lg">
-            <div className="sticky top-0 flex h-screen items-end overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-4">
-                    {cards.map((card) => {
-                        return <Card card={card} key={card.id} />;
-                    })}
-                </motion.div>
-            </div>
-        </section>
+      <section ref={targetRef} className="relative h-[250vh] rounded-lg"> 
+        <div className="sticky top-0 h-screen items-end overflow-hidden">
+          <motion.div style={{ y }} className="gap-4">
+            {cards.map((card) => {
+              return <Card card={card} key={card.id} />;
+            })}
+          </motion.div>
+        </div>
+            <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, provident atque nisi voluptates laboriosam, officia facere et nesciunt accusantium veniam, quidem cum impedit aperiam vero? Ratione quis praesentium officia molestias fuga ipsam in, repudiandae pariatur. Blanditiis dignissimos exercitationem ullam excepturi sed officia at illo in?
+            </p>
+      </section>
     );
-};
+  };
 
 const Card = ({ card }) => {
     return (
         <div
             key={card.id}
-            className="group relative h-[450px] w-[450px] overflow-hidden rounded-lg"
+            className="group relative h-[500px] w-[550px] overflow-hidden rounded-lg"
         >
             <div
                 style={{
@@ -45,4 +68,4 @@ const Card = ({ card }) => {
     );
 };
 
-export default HorizontalScrollCarousel;
+export default VerticalScrollCarousel;

@@ -7,7 +7,7 @@ import { Menus } from "./../constants/NavItems"
 const Navbar = () => {
 
   return (
-    <nav className=" py-3 flex items-center justify-between bg-neutral-900 text-white rounded-2xl px-8 sticky w-full max-w-[96rem] mx-auto opacity-85 z-[999]">
+    <nav className=" py-3 flex items-center justify-between bg-neutral-900 text-white rounded-2xl px-8 sticky w-full max-w-[96rem] mx-auto opacity-85 z-[999] top-0">
     <div className="flex items-center gap-x-3 relative">
       <Link to="/">
       <h3 className="text-lg">rodella</h3>
@@ -16,7 +16,7 @@ const Navbar = () => {
 
     <ul className="gap-x-1 lg:flex items-center hidden">
       {Menus.map((menu) => (
-        <Link to={menu.href}>
+        <Link to={menu.href} key={menu.id}>
         <DesktopMenu menu={menu} key={menu.name} />
         </Link>
       ))}

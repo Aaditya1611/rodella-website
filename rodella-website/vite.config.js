@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  assetsInclude: [
+    "**/*.PNG",
+    "**/*.JPG",
+    "**/*.glb"
+  ],
+  
 })

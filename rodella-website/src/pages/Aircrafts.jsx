@@ -1,17 +1,19 @@
-import CheckMarkIcon from "./../assets/images/check-mark.png";
-import FixedWingDrone1 from "./../assets/images/fixed-wing1.png";
 import Navbar from "../components/Navbar";
 import AirCraftData from "../constants/AircraftData";
 import MultirotorProducts from "../constants/MultirotorProducts";
 import FixedWingProducts from "../constants/FixedWingProducts";
 import React, { useState, useEffect } from "react";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
 const Aircrafts = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState('fade-in');
+  // const [availability, setAvailability] = useState(false);
+
+  // if(MultirotorProducts[availability].price){
+  //   setAvailability(true);
+  // }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,12 +27,12 @@ const Aircrafts = () => {
   }, [AirCraftData.length]);
 
   return (
-    <div className="min-h-screen">
+    <div >
       <section className="min-h-screen relative pt-2">
-        <Navbar />
+      <Navbar />
         <img
           src={AirCraftData[currentImageIndex].AircraftPageImg}
-          className={`absolute top-0 left-0 w-full h-full -z-50 object-cover brightness-30 transition-opacity ${animationClass}`}
+          className={`absolute top-0 left-0 w-full h-full -z-50 object-cover brightness-70 transition-opacity ${animationClass}`}
           alt="Aircraft showcase"
         />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col h-full justify-between">
@@ -58,19 +60,19 @@ const Aircrafts = () => {
             {[
               {
                 label: "Longer Flight Time",
-                value: AirCraftData[currentImageIndex].flightTime,
+                value: AirCraftData[currentImageIndex].FlightTime,
               },
               {
-                label: "Video Transmission Range",
-                value: AirCraftData[currentImageIndex].TransmissionRange,
+                label: "Transmission Range",
+                value: AirCraftData[currentImageIndex].Range,
               },
               {
                 label: "High-res Live Feed",
                 value: AirCraftData[currentImageIndex].LiveFeed,
               },
               {
-                label: "Positioning Technology",
-                value: AirCraftData[currentImageIndex].Positioning,
+                label: "Payload",
+                value: AirCraftData[currentImageIndex].Payload,
               },
             ].map((item, index) => (
               <div
@@ -95,13 +97,13 @@ const Aircrafts = () => {
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
             We have a wide range of custom based drone solutions
           </h1>
-          <h2 className="text-base sm:text-lg lg:text-xl text-neutral-300 mt-4">
+          {/* <h2 className="text-base sm:text-lg lg:text-xl text-neutral-300 mt-4">
             As of now we excel at 2 categories of drones
-          </h2>
-          <div className="text-sm sm:text-base text-neutral-300 mt-6 border-2 rounded-full p-3 sm:p-4 flex items-center w-fit">
+          </h2> */}
+          {/* <div className="text-sm sm:text-base text-neutral-300 mt-6 border-2 rounded-full p-3 sm:p-4 flex items-center w-fit">
             <p>Go ahead and take a look for yourself</p>
             <ArrowDownIcon className="h-4 w-4 sm:h-5 sm:w-5 ml-2" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -126,13 +128,15 @@ const Aircrafts = () => {
                   alt={item.name}
                   className="w-full h-48 sm:h-56 lg:h-64 object-cover"
                 />
-                <h1 className="text-white text-lg sm:text-xl text-center mt-4">
+                <h1 className="text-white text-lg sm:text-xl text-center my-6">
                   {item.name}
                 </h1>
+               
+                
               </Link>
-              <p className="text-white text-sm sm:text-base text-center my-4">
-                {item.price}
-              </p>
+              {/* <p className="text-white text-sm sm:text-base text-center my-4">
+                {MultirotorProducts[availability].price}
+              </p> */}
             </div>
           ))}
         </div>
@@ -159,13 +163,13 @@ const Aircrafts = () => {
                   alt={item.name}
                   className="w-full h-48 sm:h-56 lg:h-64 object-cover"
                 />
-                <h1 className="text-white text-lg sm:text-xl text-center mt-4">
+                <h1 className="text-white text-lg sm:text-xl text-center my-6">
                   {item.name}
                 </h1>
               </Link>
-              <p className="text-white text-sm sm:text-base text-center my-4">
+              {/* <p className="text-white text-sm sm:text-base text-center my-4">
                 {item.price}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>

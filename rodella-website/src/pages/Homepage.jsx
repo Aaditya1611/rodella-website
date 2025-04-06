@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div className="min-h-screen">
       <section className="h-screen relative pt-2">
-        <Navbar />
+      <Navbar />
         <video
           className="absolute top-0 left-0 w-full h-full object-cover brightness-30 -z-50"
           src={HomePageVideo}

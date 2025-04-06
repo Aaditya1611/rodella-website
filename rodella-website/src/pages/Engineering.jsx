@@ -1,11 +1,20 @@
 import Navbar from "../components/Navbar";
 import DesignImg1 from "./../assets/images/services.jpg";
 import DesignImg2 from "./../assets/images/fixed-wing1.png";
-import PrototypeImg1 from "./../assets/images/design.jpg";
-import PrototypeImg2 from "./../assets/images/MQ650LV.jpg";
-import PrototypeImg3 from "./../assets/images/fixed-wing2.jpg";
+import engineering from "./../assets/images/engineering.PNG"
+import engineering2 from "./../assets/images/engineering2.JPG"
+import engineering3 from "./../assets/images/engineering3.PNG"
+import engineering4 from "./../assets/images/engineering4.jpg"
+import engineering5 from "./../assets/images/engineering5.jpg"
+import engineering6 from "./../assets/images/engineering6.jpg"
+import engineering7 from "./../assets/images/engineering7.jpg"
+import engineering9 from "./../assets/images/engineering9.JPG"
+import engineering10 from "./../assets/images/engineering10.JPG"
+import engineering11 from "./../assets/images/engineering11.JPG"
+import engineering12 from "./../assets/images/engineering12.JPG"
+import AirframeIntegration from "./../assets/images/AirframeIntegration.jpeg"
 import React, { useRef } from "react";
-import HorizontalScrollCarousel from "../components/HorizontalScrollCarousel";
+import VerticalScrollCarousel from "../components/HorizontalScrollCarousel";
 import { ArrowUp, Route } from "lucide-react";
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
@@ -149,7 +158,7 @@ const Engineering = () => {
                             </motion.p>
 
 
-                            <motion.img src={DesignImg1}
+                            <motion.img src={engineering}
                                 initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -161,7 +170,7 @@ const Engineering = () => {
                     <div className="mt-10 px-3 lg:px-30">
                         <h2 className="lg:text-3xl text-xl text-neutral-200 my-5">Aerodynamic Analysis</h2>
                         <div className="flex lg:flex-row flex-col">
-                            <motion.img src={DesignImg2}
+                            <motion.img src={engineering2}
                                 initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -192,7 +201,7 @@ const Engineering = () => {
                                 Asperiores ut eius soluta.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </motion.p>
-                            <motion.img src={DesignImg1}
+                            <motion.img src={engineering10}
                                 initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 1 * 0.1 }}
@@ -217,7 +226,7 @@ const Engineering = () => {
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
                             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                             className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
-                            <img src={PrototypeImg1} className="h-130 object-cover rounded-lg" alt="Prototype Image 1"></img>
+                            <img src={engineering3} className="h-130 object-cover rounded-lg" alt="Prototype Image 1"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Prototype Construction</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
                         </motion.div>
@@ -227,7 +236,7 @@ const Engineering = () => {
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
                             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                             className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
-                            <img src={PrototypeImg1} className="h-130 object-cover rounded-lg" alt="Prototype Image 2"></img>
+                            <img src={engineering4} className="h-130 object-cover rounded-lg" alt="Prototype Image 2"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Component testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Each individual components (motors, ESCs, batteries) are tested vigorously for performance and reliability.</p> */}
                         </motion.div>
@@ -237,7 +246,7 @@ const Engineering = () => {
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
                             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                             className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
-                            <img src={PrototypeImg2} className="h-130 object-cover rounded-lg" alt="Prototype Image 3"></img>
+                            <img src={engineering11} className="h-130 object-cover rounded-lg" alt="Prototype Image 3"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Ground testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Various ground testing are performed in order to determine the functionality of all the control systems and sensors </p> */}
                         </motion.div>
@@ -247,7 +256,7 @@ const Engineering = () => {
                             transition={{ duration: 0.6, delay: 1 * 0.1 }}
                             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                             className="bg-neutral-900 flex flex-col items-center pb-4 opacity-80 rounded-lg">
-                            <img src={PrototypeImg3} className="h-130 object-cover rounded-lg" alt="Prototype Image 4"></img>
+                            <img src={engineering9} className="h-130 object-cover rounded-lg" alt="Prototype Image 4"></img>
                             <h1 className="text-2xl text-neutral-300 mt-5">Flight testing</h1>
                             {/* <p className="text-xl text-neutral-300 mt-5 text-center">Multiple flight tests are conducted in controlled environment to evaluate stability, performance and control of the aircraft</p> */}
                         </motion.div>
@@ -257,8 +266,8 @@ const Engineering = () => {
                 <section ref={section3Ref} id="section3" className="lg:pt-30 py-10 lg:block hidden">
                     <h1 className="text-3xl text-center text-white underline lg:text-5xl">Simulation</h1>
                     <p className="mt-3 px-2 text-center text-lg text-neutral-400 lg:text-xl">From static testing to CFD, to model analysis, we do it for ourselves, We will do it for you</p>
-                    <div className="mt-10">
-                        <HorizontalScrollCarousel />
+                    <div className="mt-10 flex flex-row">
+                        <VerticalScrollCarousel />
                     </div>
                 </section>
 
@@ -266,7 +275,7 @@ const Engineering = () => {
                     <h1 className="text-3xl text-center text-white underline lg:text-5xl">Airframe Integration</h1>
                     <p className="mt-3 px-2 text-center text-lg text-neutral-400 lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div className="lg:px-20 max-w-full mt-10 px-3">
-                        <img src={DesignImg2} className="lg:h-150 w-full object-cover rounded-lg" alt="Airframe Integration Image"></img>
+                        <img src={AirframeIntegration} className="lg:h-150 w-full object-cover rounded-lg" alt="Airframe Integration Image"></img>
                     </div>
 
                     <motion.div 

@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function MobMenu({ Menus }) {
+
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(null);
   const toggleDrawer = () => {
@@ -61,9 +62,8 @@ export default function MobMenu({ Menus }) {
                     className="ml-5"
                   >
                     {subMenu.map(({ name, href, id }) => (
-                        <Link to={href}>
+                        <Link to={href}  key={id}>
                          <li
-                        key={id}
                         className="p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2"
                       >
                         {name}
