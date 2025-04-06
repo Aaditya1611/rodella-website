@@ -4,7 +4,7 @@ export const Menus = [
   {
     id: 1,
     name: "Aircrafts",
-    subMenuHeading: ["Multirotor", "FixedWings"],
+    subMenuHeading: ["Multirotor", "FixedWings",],
     href: "/aircrafts",
     subMenu: [
       {
@@ -28,8 +28,14 @@ export const Menus = [
       {
         id: 4,
         name: "Nova Wing-Q3484MXV",
-        desc: "Management content",
+        desc: "CMS",
         href: "/fixedwing/2"
+      },
+      {
+        id: 6,
+        name: "SAP-6",
+        desc: "Multirotor",
+        href: "/othercrafts/1"
       },
       {
         id: 5,
@@ -38,10 +44,10 @@ export const Menus = [
         href: "/multirotor/3"
       },
       {
-        id: 6,
-        name: "Cipher Flight-QW3289LV",
-        desc: "Management content",
-        href: "/fixedwing/3"
+        id: 9,
+        name: "SAP-9",
+        desc: "Multirotor",
+        href: "/othercrafts/2"
       },
     ],
     gridCols: 2,
@@ -65,7 +71,7 @@ export const Menus = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "About",
     href: "/about",
   },
