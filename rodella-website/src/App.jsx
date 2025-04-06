@@ -18,6 +18,7 @@ import EngPageDesignSection from "./components/SmallerScreen/EngPgDesignSec";
 import EngPageSimulationSection from "./components/SmallerScreen/EngPgSimulationSec";
 import EngPagePrototypeSection from "./components/SmallerScreen/EngPgPrototypeSec";
 import EngPageAirframeSection from "./components/SmallerScreen/EngPgAirframeSec";
+import OtherCrafts from "./components/OtherCrafts";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/prototype" element={<EngPagePrototypeSection />} />
           <Route path="/airframe" element={<EngPageAirframeSection />} />
           <Route path="/gcs" element={<GCS />} />
+          <Route path="/othercrafts/:id" element={<OtherCrafts />} />
         </Routes>
         <Footer />
       </div>
