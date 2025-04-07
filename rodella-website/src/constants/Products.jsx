@@ -70,7 +70,7 @@ const Products = [
         Payload: "2KG",
 
         MainBGImg: sap900,
-        OtherImg: MQ6502,
+        OtherImg: sap900,
         IsoFront: S9Isofront,
         IsoTop: S9Isoside,
         Isometric: S9Isometric
