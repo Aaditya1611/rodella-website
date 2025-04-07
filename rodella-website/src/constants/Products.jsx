@@ -6,7 +6,7 @@ import S6Isometric from "./../assets/images/isometric.svg";
 import S9Isofront from "./../assets/images/S9front.svg";
 import S9Isoside from "./../assets/images/S9side.svg";
 import S9Isometric from "./../assets/images/S9isometric.svg";
-import sap900 from "./../assets/images/SAP900.png";
+import sap900 from "./../assets/images/Sap9.png";
 
 const Products = [
 
