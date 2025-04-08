@@ -7,6 +7,9 @@ import S9Isofront from "./../assets/images/S9front.svg";
 import S9Isoside from "./../assets/images/S9side.svg";
 import S9Isometric from "./../assets/images/S9isometric.svg";
 import sap900 from "./../assets/images/Sap9.png";
+import sap91 from "./../assets/images/SAP-9/front.svg";
+import sap92 from "./../assets/images/SAP-9/isometric.svg";
+import sap93 from "./../assets/images/SAP-9/side.svg";
 
 const Products = [
 
@@ -71,10 +74,12 @@ const Products = [
 
         MainBGImg: sap900,
         OtherImg: sap900,
-        IsoFront: S9Isofront,
-        IsoTop: S9Isoside,
-        Isometric: S9Isometric
-       
+        // IsoFront: S9Isofront,
+        // IsoTop: S9Isoside,
+        // Isometric: S9Isometric
+        IsoFront: sap91,
+        IsoTop: sap93,
+        Isometric: sap92
     },
 
 ]
