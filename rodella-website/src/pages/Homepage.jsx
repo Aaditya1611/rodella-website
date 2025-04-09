@@ -28,7 +28,7 @@ const Homepage = () => {
                 AEROSPACE LABS
               </h2>
 
-              <p className="mt-6 sm:mt-8 lg:mt-10 text-lg sm:text-xl lg:text-2xl text-white max-w-2xl sm:max-w-3xl lg:max-w-4xl px-4">
+              <p className="mt-6 sm:mt-8 lg:mt-10 text-sm sm:text-xl lg:text-2xl text-white max-w-2xl sm:max-w-3xl lg:max-w-4xl px-4">
                 DELIVERING SUPREME BEYOND THE CALL OF DUTY
               </p>
 
