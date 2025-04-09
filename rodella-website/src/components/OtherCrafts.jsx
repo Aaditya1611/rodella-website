@@ -29,10 +29,10 @@ const OtherCrafts = () => {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 my-20 sm:mt-12 px-6 sm:px-10 lg:px-20">
                 {[
-                    { label: "Longer Flight Time", value: drone.FlightTime },
-                    { label: "Transmission Range", value: drone.TransmissionRange },
-                    { label: "High-res Live Feed", value: drone.Camera },
+                    { label: "Endurance Upto", value: drone.FlightTime },
+                    { label: "Range Upto", value: drone.TransmissionRange },
                     { label: "Payload", value: drone.Payload },
+                    { label: "MTOW", value: drone.Camera },
                 ].map((item, index) => (
                     <div
                         key={index}
@@ -56,7 +56,7 @@ const OtherCrafts = () => {
                 ))}
             </div>
 
-            <div className="lg:px-50 lg:py-20 min-h-screen px-5">
+            <div className="lg:px-50 lg:py-10 min-h-screen px-5">
                 <div className="flex lg:flex-row gap-20 lg:items-center lg:justify-center flex-col">
 
                     <motion.p
@@ -66,25 +66,41 @@ const OtherCrafts = () => {
                         className="text-white lg:text-lg text-sm lg:w-1/2 text-wrap">{drone.description}
                     </motion.p>
 
-                    <img src={drone.Isometric} className="scale-125 lg:w-1/2"></img>
+                    <motion.img
+
+                        initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50, scale: 1 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{ duration: 1.5, delay: 1 * 0.1, ease: 'easeInOut' }}
+                        src={drone.Isometric}
+                        className="scale-110 lg:w-1/2"></motion.img>
                 </div>
                 <div className="flex lg:flex-row justify-center gap-20 items-center flex-col md:flex-row">
                     <div >
-                        <img src={drone.IsoTop} className="lg:h-[650px] scale-125"></img>
+                        <motion.img
+                            initial={{ opacity: 0, x: 1 % 2 === 0 ? 50 : -50, scale: 1 }}
+                            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                            transition={{ duration: 1.5, delay: 1 * 0.1, ease: 'easeInOut' }}
+                            src={drone.IsoTop}
+                            className="lg:h-[650px] scale-110"></motion.img>
                     </div>
                     <div >
-                        <img src={drone.IsoFront} className="lg:h-[650px] scale-125 rotate-90"></img>
+                        <motion.img
+                           initial={{ opacity: 0, x: 1 % 2 === 0 ? -50 : 50, scale: 1 }}
+                           whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                           transition={{ duration: 1.5, delay: 1 * 0.1, ease: 'easeInOut' }}
+                            src={drone.IsoFront}
+                            className="lg:h-[650px] scale-110 rotate-90"></motion.img>
                     </div>
                 </div>
             </div>
 
-            <div className="flex lg:flex-row min-h-screen lg:px-50 py-20 flex-col">
+            <div className="flex lg:flex-row min-h-screen lg:px-50 py-2 flex-col">
                 <div className="flex flex-col lg:w-1/2 h-full text-white p-5">
-                    <motion.div 
-                      initial={{ opacity: 0, scale: 1 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 1, ease: "easeInOut" }}
-                     className="text-white flex flex-col lg:pr-10">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 1 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, ease: "easeInOut" }}
+                        className="text-white flex flex-col lg:pr-10">
                         <h1 className="lg:text-[30px] font-sans text-white mb-4 sm:text-sm">Technical Overview</h1>
                         <table className="min-w-full border-collapse border-b border-gray-300">
                             <tbody>
@@ -121,7 +137,7 @@ const OtherCrafts = () => {
                     </motion.div>
                 </div>
                 <div className="w-full h-full">
-                    <img src={drone.OtherImg} className="object-cover w-full h-full scale-125" alt="Drone" />
+                    <img src={drone.OtherImg} className="object-cover w-full h-full" alt="Drone" />
                 </div>
             </div>
         </div >
