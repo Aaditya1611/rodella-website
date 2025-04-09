@@ -19,7 +19,7 @@ const OtherCrafts = () => {
             <div className="min-h-screen relative flex justify-center items-center">
                 <img
                     src={drone.MainBGImg}
-                    className="h-full absolute inset-0 object-cover -z-50 w-full scale-110"
+                    className="h-full absolute inset-0 object-cover -z-50 w-full top-0 left-0"
                     alt="Fixed Wing Drone"
                 />
                 <div className="flex flex-col justify-center items-center">
@@ -42,15 +42,15 @@ const OtherCrafts = () => {
                             initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="text-white font-bold text-lg sm:text-xl lg:text-4xl mb-2 sm:mb-4">
-                            {item.value}
+                            className="text-neutral-300 text-sm sm:text-base lg:text-xl mb-2 sm:mb-4">
+                            {item.label}
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="text-neutral-300 text-sm sm:text-base lg:text-xl">
-                            {item.label}
+                            className="text-white font-bold text-lg sm:text-xl lg:text-4xl mb-2">
+                            {item.value}
                         </motion.p>
                     </div>
                 ))}
