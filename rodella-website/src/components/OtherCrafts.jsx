@@ -16,18 +16,19 @@ const OtherCrafts = () => {
         <div> {/* Removed h-screen here */}
         <section className="pt-2">
             <Navbar />
-            <div className="min-h-screen relative flex justify-center items-center">
+            <div className="lg:min-h-screen md:min-h-screen relative flex justify-center items-center h-[50vh]">
                
                 <img
                     src={drone.MainBGImg}
-                    className="lg:h-full absolute object-cover -z-50 lg:w-full h-1/2 md:h-full md:w-full"
+                    className="lg:h-full absolute object-cover -z-50 lg:w-full md:h-full md:w-full"
                     alt="Fixed Wing Drone"
                 />
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-neutral-100 lg:text-8xl text-6xl font-bold">{drone.name}</h1>
+                    <h1 className="text-neutral-100 lg:text-8xl text-5xl font-bold hidden lg:block md:block">{drone.name}</h1>
                     {/* <p className="text-white text-lg text-center mt-4">Explore the skies</p> */}
                 </div>
             </div>
+            <h1 className="text-neutral-100 lg:text-8xl text-5xl font-bold lg:hidden md:hidden text-center">{drone.name}</h1>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 my-20 sm:mt-12 px-6 sm:px-10 lg:px-20">
                 {[
                     { label: "Endurance Upto", value: drone.FlightTime },
