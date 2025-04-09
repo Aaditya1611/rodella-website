@@ -23,8 +23,8 @@ const OtherCrafts = () => {
                     alt="Fixed Wing Drone"
                 />
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-neutral-300 text-7xl font-bold">{drone.name}</h1>
-                    <p className="text-white text-lg text-center mt-4">Explore the skies</p>
+                    <h1 className="text-neutral-100 text-8xl font-bold">{drone.name}</h1>
+                    {/* <p className="text-white text-lg text-center mt-4">Explore the skies</p> */}
                 </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 my-20 sm:mt-12 px-6 sm:px-10 lg:px-20">
