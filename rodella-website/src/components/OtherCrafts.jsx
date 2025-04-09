@@ -14,16 +14,17 @@ const OtherCrafts = () => {
 
     return (
         <div> {/* Removed h-screen here */}
-            <section className="pt-2"></section>
+        <section className="pt-2">
             <Navbar />
             <div className="min-h-screen relative flex justify-center items-center">
+               
                 <img
                     src={drone.MainBGImg}
-                    className="h-full absolute inset-0 object-cover -z-50 w-full top-0 left-0"
+                    className="lg:h-full absolute object-cover -z-50 lg:w-full h-1/2 md:h-full md:w-full"
                     alt="Fixed Wing Drone"
                 />
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-neutral-100 text-8xl font-bold">{drone.name}</h1>
+                    <h1 className="text-neutral-100 lg:text-8xl text-6xl font-bold">{drone.name}</h1>
                     {/* <p className="text-white text-lg text-center mt-4">Explore the skies</p> */}
                 </div>
             </div>
@@ -140,6 +141,7 @@ const OtherCrafts = () => {
                     <img src={drone.OtherImg} className="object-cover w-full h-full" alt="Drone" />
                 </div>
             </div>
+            </section>
         </div >
     );
 };
