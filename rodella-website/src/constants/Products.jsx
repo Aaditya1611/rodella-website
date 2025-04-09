@@ -74,12 +74,9 @@ const Products = [
 
         MainBGImg: sap900,
         OtherImg: sap900,
-        // IsoFront: S9Isofront,
-        // IsoTop: S9Isoside,
-        // Isometric: S9Isometric
-        IsoFront: sap91,
-        IsoTop: sap93,
-        Isometric: sap92
+        IsoFront: S9Isofront,
+        IsoTop: S9Isoside,
+        Isometric: S9Isometric
     },
 
 ]
