@@ -3,9 +3,9 @@ import { href } from "react-router-dom";
 export const Menus = [
   {
     id: 1,
-    name: "Aircrafts",
+    name: "SAP",
     subMenuHeading: ["", "",],
-    //href: "/aircrafts",
+    href: "/aircrafts",
     subMenu: [
       // {
       //   id: 1,
