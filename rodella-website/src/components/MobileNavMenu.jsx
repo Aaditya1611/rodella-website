@@ -39,21 +39,20 @@ export default function MobMenu({ Menus }) {
             const isClicked = clicked === i;
             const hasSubMenu = subMenu?.length;
             return (
-
               <li key={id} className="">
-                <Link to={href} >
-                <span
+                <div
                   className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
                   onClick={() => setClicked(isClicked ? null : i)}
                 >
-                  {name}
+                  <Link to={href} className="flex-grow">
+                    {name}
+                  </Link>
                   {hasSubMenu && (
                     <ChevronDown
                       className={`ml-auto ${isClicked && "rotate-180"} `}
                     />
                   )}
-                </span>
-                </Link>
+                </div>
                 {hasSubMenu && (
                   <motion.ul
                     initial="exit"
@@ -62,14 +61,14 @@ export default function MobMenu({ Menus }) {
                     className="ml-5"
                   >
                     {subMenu.map(({ name, href, id }) => (
-                        <Link to={href}  key={id}>
-                         <li
-                        className="p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2"
-                      >
-                        {name}
-                      </li>   
+                      <li key={id}>
+                        <Link
+                          to={href}
+                          className="p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2"
+                        >
+                          {name}
                         </Link>
-                     
+                      </li>
                     ))}
                   </motion.ul>
                 )}

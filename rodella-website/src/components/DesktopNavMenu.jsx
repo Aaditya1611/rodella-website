@@ -42,12 +42,12 @@ const DesktopMenu = ({menu}) =>  {
       onHoverEnd={toggleHoverMenu}
       key={menu.name}
     >
-      <span className="flex items-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
+      <div className="flex items-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
         {menu.name}
         {hasSubMenu && (
           <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
         )}
-      </span>
+      </div>
       {hasSubMenu && (
         <motion.div
           className="sub-menu"
@@ -72,14 +72,12 @@ const DesktopMenu = ({menu}) =>  {
                       {menu?.subMenuHeading?.[i]}
                     </p>
                   )}
-                  <div className="flex items-center gap-x-4 group/menubox">
+                  <Link to={submenu.href} className="flex items-center gap-x-4 group/menubox">
                     <div>
-                        <Link to={submenu.href}>
-                        <h6 className="font-semibold">{submenu.name}</h6>
-                        <p className="text-sm text-gray-400">{submenu.desc}</p>
-                        </Link>
+                      <h6 className="font-semibold">{submenu.name}</h6>
+                      <p className="text-sm text-gray-400">{submenu.desc}</p>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
           </div>

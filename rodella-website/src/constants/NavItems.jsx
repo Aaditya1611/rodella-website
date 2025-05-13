@@ -37,17 +37,17 @@ export const Menus = [
         desc: "Multirotor",
         href: "/othercrafts/1"
       },
-      // {
-      //   id: 5,
-      //   name: "X-MQ900",
-      //   desc: "Link pages",
-      //   href: "/multirotor/3"
-      // },
+      {
+        id: 7,
+        name: "SAP-7",
+        desc: "Multirotor",
+        href: "/othercrafts/2"
+      },
       {
         id: 9,
         name: "SAP-9",
         desc: "Multirotor",
-        href: "/othercrafts/2"
+        href: "/othercrafts/3"
       },
     ],
     gridCols: 2,
