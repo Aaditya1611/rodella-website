@@ -163,7 +163,7 @@ const Aircrafts = () => {
               Volume Production
             </h1>
             <p className="text-neutral-300 mt-5 ml-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eaque reprehenderit error consequatur necessitatibus tenetur. Sed repellendus dignissimos molestias dolor!
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eaque reprehenderit error necessitatibus tenetur. Sed repellendus dignissimos molestias dolor!
             </p>
           </div>
           <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
