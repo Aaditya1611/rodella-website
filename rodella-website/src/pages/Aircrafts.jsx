@@ -1,55 +1,33 @@
 import Navbar from "../components/Navbar";
-import AirCraftData from "../constants/AircraftData";
-import MultirotorProducts from "../constants/MultirotorProducts";
-import FixedWingProducts from "../constants/FixedWingProducts";
-import React, { useState, useEffect, useRef } from "react";
-import { ArrowRightIcon, Squares2X2Icon, ShieldCheckIcon, Cog8ToothIcon, AdjustmentsHorizontalIcon, WrenchScrewdriverIcon, BoltIcon, CubeIcon, UserGroupIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
-import SAPproducts from "./../constants/Products"
+import { useState } from "react";
+import SAP6 from "../components/SAP6";
+import SAP7 from "../components/SAP7";
+import SAP9 from "../components/SAP9";
+import { motion } from "framer-motion";
+import firstImage from "./../assets/images/fixed-wing2.jpg";
+import { ArrowRightIcon, Squares2X2Icon, ShieldCheckIcon, Cog8ToothIcon, UserGroupIcon, GlobeAltIcon, WrenchScrewdriverIcon, CubeIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-import { useReducer } from "react";
-import ContactUs from "./ContactUs";
-import firstImage from "./../assets/images/fixed-wing2.jpg"
-
 
 const Aircrafts = () => {
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const [animationClass, setAnimationClass] = useState('fade-in');
+  const [selectedSAP, setSelectedSAP] = useState('sap6');
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-  const [hoveredId, setHoveredId] = useState(null);
-  const timeoutRef = useRef(null);
+  const selectButton = (active) =>
+    `selectx px-4 py-2 rounded-lg m-1 cursor-pointer text-base font-semibold transition-all duration-300 transform hover:scale-105 ${
+      active ? 'bg-[#4CAF50] text-black shadow-lg' : 'bg-[#1a1a1a] text-[#4CAF50] border border-[#444] hover:border-[#4CAF50]'
+    }`;
 
-  const handleMouseEnter = (id) => {
-    clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setHoveredId(id)
-    }, 300);
-  }
-
-  const handleMouseLeave = () => {
-    clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setHoveredId(null)
-    }, 1000);
-  }
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setAnimationClass('fade-out');
-  //     setTimeout(() => {
-  //       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % AirCraftData.length);
-  //       setAnimationClass('fade-in');
-  //     }, 800); // Animation duration
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [AirCraftData.length]);
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
-    <div >
+    <div>
       <section className="pt-2">
         <Navbar />
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-25 min-h-screen relative">
+      {/* <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-25 min-h-screen relative">
         <h1 className="lg:text-6xl text-white text-center md:text-5xl text-3xl underline">Standard Aeriel Platform</h1>
         <div className="flex lg:flex-row lg:gap-5 flex-col">
           <div className="text-neutral-200 lg:w-1/2 py-10">
@@ -65,7 +43,7 @@ const Aircrafts = () => {
             <span className="lg:text-7xl text-3xl font-bold">
               Ariel Platform.
             </span>
-            <p className="text-xl mt-7 text-neutral-400">Drones play a vital role in today's world by enhancing efficiency, safety, and accessibility across
+            <p className="text-xl mt-7 text-neutral-400">Drones play a vital role in today&apos;s world by enhancing efficiency, safety, and accessibility across
               industries.</p>
             <p className="text-xl mt-3 text-neutral-400 mb-8">
               Connect with us so we can deliver customised drone solutions as per your needs.
@@ -81,7 +59,71 @@ const Aircrafts = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
+
+<motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2d2d2d] text-[#eee] font-sans relative"
+      >
+        <div className="absolute inset-0 bg-black" style={{ zIndex: 0 }} />
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative" style={{ zIndex: 1 }}>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h1 className="text-3xl font-bold text-white mb-6 opacity-90 hover:opacity-100 transition-opacity duration-300">Standard Aeriel Platform Specifications</h1>
+            <div className="flex justify-center gap-4">
+              <button
+                className={`text-white bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300 px-6 py-3 rounded-md text-lg sm:text-xl text-center opacity-90 hover:opacity-100 ${
+                  selectedSAP === 'sap6' ? 'ring-2 ring-[#fff]' : ''
+                }`}
+                onClick={() => {
+                  setSelectedSAP('sap6');
+                  setImageLoaded(false);
+                }}
+              >
+                SAP-6
+              </button>
+              <button
+                className={`text-white bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300 px-6 py-3 rounded-md text-lg sm:text-xl text-center opacity-90 hover:opacity-100 ${
+                  selectedSAP === 'sap7' ? 'ring-2 ring-[#fff]' : ''
+                }`}
+                onClick={() => {
+                  setSelectedSAP('sap7');
+                  setImageLoaded(false);
+                }}
+              >
+                SAP-7
+              </button>
+              <button
+                className={`text-white bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300 px-6 py-3 rounded-md text-lg sm:text-xl text-center opacity-90 hover:opacity-100 ${
+                  selectedSAP === 'sap9' ? 'ring-2 ring-[#fff]' : ''
+                }`}
+                onClick={() => {
+                  setSelectedSAP('sap9');
+                  setImageLoaded(false);
+                }}
+              >
+                SAP-9
+              </button>
+            </div>
+          </motion.div>
+          
+          <div className="relative" style={{ zIndex: 2 }}>
+            {selectedSAP === 'sap6' ? (
+              <SAP6 onImageLoad={handleImageLoad} imageLoaded={imageLoaded} />
+            ) : selectedSAP === 'sap7' ? (
+              <SAP7 onImageLoad={handleImageLoad} imageLoaded={imageLoaded} />
+            ) : (
+              <SAP9 onImageLoad={handleImageLoad} imageLoaded={imageLoaded} />
+            )}
+          </div>
+        </div>
+      </motion.div>
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div>
@@ -107,6 +149,8 @@ const Aircrafts = () => {
           </div>
         </div>
       </section>
+
+      
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <h1 className="text-neutral-400 text-xl text-center py-5 underline">
@@ -152,10 +196,10 @@ const Aircrafts = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+      {/* <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="lg:w-1/2">
           <h1 className="text-neutral-400 underline text-xl">
-            About rodella's SAP
+            About rodella&apos;s SAP
           </h1>
           <p className="lg:text-5xl text-3xl font-semibold text-white mt-5">
             The Comprehensive Solution for Your Needs.
@@ -192,7 +236,7 @@ const Aircrafts = () => {
         <div className="flex flex-col mt-10">
           <div className="flex flex-row lg:items-center items-start gap-5">
             <div className="lg:w-25 lg:h-25 rounded-full bg-neutral-800 justify-center items-center flex text-white">
-              <GlobeAltIcon className="lg:w-12, lg:h-12 h-10 w-10" />
+              <GlobeAltIcon className="lg:w-12 lg:h-12 h-10 w-10" />
             </div>
             <div className="flex flex-col gap-4">
               <h1 className="text-white font-semibold lg:text-3xl text-xl">Made for the Future, Today</h1>
@@ -201,147 +245,9 @@ const Aircrafts = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-2 underline">
-          Explore our products
-
-        </h1>
-        <h2 className="text-neutral-400 mt-4 sm:mt-5 text-base sm:text-lg max-w-3xl">
-          We specialize in crafting custom drone solutions as per your requirements,
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
-          {SAPproducts.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col items-center shadow-lg bg-neutral-900 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-              onMouseEnter={() => handleMouseEnter(item.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              <Link to={`/othercrafts/${item.id}`} className="w-full">
-                <img
-                  src={hoveredId === item.id ? item.IsoTop : item.MainBGImg}
-                  alt={item.name}
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover bg-neutral-800 transition-opacity duration-300"
-                />
-                <h1 className="text-white text-lg sm:text-xl text-center my-6">
-                  {item.name}
-                </h1>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* <section className="min-h-screen relative pt-2">
-      <Navbar />
-        <img
-          src={AirCraftData[currentImageIndex].AircraftPageImg}
-          className={`absolute top-0 left-0 w-full h-full -z-50 object-cover brightness-70 transition-opacity ${animationClass}`}
-          alt="Aircraft showcase"
-        />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col h-full justify-between">
-          <div>
-          <h1 className="text-4xl sm:text-6xl lg:text-9xl bg-gradient-to-b text-white bg-clip-text text-center mt-8 sm:mt-12 lg:mt-20 font-bold">
-            Let&apos;s fly higher
-          </h1>
-
-          <Link
-            to={`/aircrafts/${AirCraftData[currentImageIndex].id}`}
-            className="flex justify-center mt-8 sm:mt-12"
-          >
-            <p className="text-xl sm:text-2xl lg:text-3xl text-black bg-neutral-400 px-6 sm:px-8 py-2 sm:py-3 rounded-full opacity-70 flex items-center hover:opacity-80 transition-opacity">
-              {AirCraftData[currentImageIndex].name}
-              <ArrowRightIcon className="h-6 w-6 sm:h-8 sm:w-8 ml-2" />
-            </p>
-          </Link>
-
-          <p className="text-base sm:text-lg lg:text-xl text-center text-neutral-300 max-w-2xl mx-auto mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            fugiat est maiores!
-          </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12">
-            {[
-              {
-                label: "Longer Flight Time",
-                value: AirCraftData[currentImageIndex].FlightTime,
-              },
-              {
-                label: "Transmission Range",
-                value: AirCraftData[currentImageIndex].Range,
-              },
-              {
-                label: "High-res Live Feed",
-                value: AirCraftData[currentImageIndex].LiveFeed,
-              },
-              {
-                label: "Payload",
-                value: AirCraftData[currentImageIndex].Payload,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center flex flex-col pt-4 sm:pt-0 sm:border-l sm:border-neutral-300 first:border-l-0"
-                // sm:border-l sm:border-neutral-300 first:border-l-0
-              >
-                <p className="text-white font-bold text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-4">
-                  {item.value}
-                </p>
-                <p className="text-neutral-300 text-sm sm:text-base lg:text-lg">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section> */}
 
-      {/* <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div>
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
-            We have a wide range of custom based drone solutions
-          </h1>
-           <h2 className="text-base sm:text-lg lg:text-xl text-neutral-300 mt-4">
-            As of now we excel at 2 categories of drones
-          </h2> 
-           <div className="text-sm sm:text-base text-neutral-300 mt-6 border-2 rounded-full p-3 sm:p-4 flex items-center w-fit">
-            <p>Go ahead and take a look for yourself</p>
-            <ArrowDownIcon className="h-4 w-4 sm:h-5 sm:w-5 ml-2" />
-          </div> 
-        </div>
-      </section> */}
-      {/* <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-2 underline text-center">
-          Fixed Wings
-        </h1>
-        <h2 className="text-neutral-400 text-center mt-4 sm:mt-5 text-base sm:text-lg max-w-3xl mx-auto">
-          We specialize in crafting custom-based fixed-wing drone solutions,
-          tailored precisely to your unique needs.
-        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
-          {FixedWingProducts.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col items-center bg-neutral-900 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-            >
-              <Link to={`/fixedwing/${item.id}`} className="w-full">
-                <img
-                  src={item.AircraftPageImg}
-                  alt={item.name}
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover"
-                />
-                <h1 className="text-white text-lg sm:text-xl text-center my-6">
-                  {item.name}
-                </h1>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section> */}
     </div>
   );
 };
