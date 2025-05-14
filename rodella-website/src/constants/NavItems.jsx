@@ -6,50 +6,6 @@ export const Menus = [
     name: "SAP",
     subMenuHeading: ["", "",],
     href: "/aircrafts",
-    subMenu: [
-      // {
-      //   id: 1,
-      //   name: "X-MQ650LV",
-      //   desc: "Responsive design",
-      //   href: "/multirotor/1"
-      // },
-      // {
-      //   id: 2,
-      //   name: "Project Talon-Q9872MV",
-      //   desc: "Management content",
-      //   href: "/fixedwing/1"
-      // },
-      // {
-      //   id: 3,
-      //   name: "MQ750LV",
-      //   desc: "Site control",
-      //   href: "/multirotor/2"
-      // },
-      // {
-      //   id: 4,
-      //   name: "Nova Wing-Q3484MXV",
-      //   desc: "CMS",
-      //   href: "/fixedwing/2"
-      // },
-       {
-        id: 6,
-        name: "SAP-6",
-        desc: "Multirotor",
-        href: "/othercrafts/1"
-      },
-      {
-        id: 7,
-        name: "SAP-7",
-        desc: "Multirotor",
-        href: "/othercrafts/2"
-      },
-      {
-        id: 9,
-        name: "SAP-9",
-        desc: "Multirotor",
-        href: "/othercrafts/3"
-      },
-    ],
     gridCols: 2,
   },
 
