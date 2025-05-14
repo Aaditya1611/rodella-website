@@ -172,7 +172,11 @@ const Aircrafts = () => {
               Reliabilty
             </h1>
             <p className="text-neutral-300 mt-5 ml-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eaque reprehenderit error consequatur necessitatibus tenetur. Sed repellendus dignissimos molestias dolor!
+<<<<<<< HEAD
+             
+=======
+              Each product has been tensively tested and they have survived the test of time. each product boost the time a slight time of 500 + hours to ensure that it is reliable and durable.
+>>>>>>> 2516d85 (Updated the SAP Page , Aircraft.jsx and content)
             </p>
           </div>
           <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
