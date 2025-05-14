@@ -1,11 +1,46 @@
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Products from "../constants/Products";
 import { motion } from "framer-motion";
+import MQ6501 from "../assets/images/MQ6505.png";
+import MQ6502 from "../assets/images/rendertransparent.PNG";
+import S6Isofront from "../assets/images/front.svg";
+import S6Isoside from "../assets/images/side.svg";
+import S6Isometric from "../assets/images/isometric.svg";
 
 const SAP6 = ({ onImageLoad, imageLoaded }) => {
-    const drone = Products.find((p) => p.id === 1);
+    const drone = {
+        id: 1,
+        name: "SAP-6",
+        description: "SAP-6 is a light weight micro-category variant borrowing its structural toughness ffrom MQ750+  Developed for quick deployment and versatile operations in the coldest and the windiest of the weathers,  the MQ650LV delivers 40 mins of operational endurance with a 10x optical zoom equipped HD electro-optic sensor. Swappable battery options make re-deployment swift enhancing the system's efficiency in real time survielance missions. Rapid survielance and reconnaisance in the tactile levels of warfare are most easily and effectively achieved with MQ650LV.",
+
+        FlightTime: "40 mins",
+        TransmissionRange: "10km",
+        Camera: "4k, 10x Optical zoom",
+        Payload: "300 gms",
+
+        TechnicalDetail1: "Cruise Speed",
+        TechnicalDetail2: "Wind resistence index",
+        TechnicalDetail3: "Gimbal Stabilization",
+        TechnicalDetail4: "Dash Speed",
+        TechnicalDetail5: "Operational Altitude",
+        TechnicalDetail6: "Wheel Base",
+        TechnicalDetail7: "Empty Weight",
+
+        TechnicalDetailsValue1: "8 m/s",
+        TechnicalDetailsValue2: "30 knots",
+        TechnicalDetailsValue3: "3 aixs stabilized",
+        TechnicalDetailsValue4: "10 m/s",
+        TechnicalDetailsValue5: "500mAGL",
+        TechnicalDetailsValue6: "650 mm",
+        TechnicalDetailsValue7: "1kg",
+
+        MainBGImg: MQ6501,
+        OtherImg: MQ6502,
+        IsoFront: S6Isofront,
+        IsoTop: S6Isoside,
+        Isometric: S6Isometric
+    };
 
     if (!drone) {
         return <div>Loading...</div>;
@@ -66,48 +101,14 @@ const SAP6 = ({ onImageLoad, imageLoaded }) => {
 
                 <div className="lg:px-50 lg:py-10 min-h-screen px-5">
                     <div className="flex lg:flex-row gap-20 lg:items-center lg:justify-center flex-col">
-                        <motion.p
+                        {/* <motion.p
                             initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
                             className="text-white lg:text-lg text-sm lg:w-1/2 text-wrap">{drone.description}
-                        </motion.p>
+                        </motion.p> */}
 
-                        <motion.img
-                            initial={{ opacity: 0, x: 50, scale: 1 }}
-                            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-                            src={drone.Isometric}
-                            className="scale-110 lg:w-1/2"
-                            alt="SAP6 Isometric View"
-                        />
-                    </div>
-                    <div className="flex lg:flex-row justify-center gap-20 items-center flex-col md:flex-row">
-                        <div>
-                            <motion.img
-                                initial={{ opacity: 0, x: 50, scale: 1 }}
-                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                                transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-                                src={drone.IsoTop}
-                                className="lg:h-[650px] scale-110"
-                                alt="SAP6 Top View"
-                            />
-                        </div>
-                        <div>
-                            <motion.img
-                                initial={{ opacity: 0, x: -50, scale: 1 }}
-                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                                transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-                                src={drone.IsoFront}
-                                className="lg:h-[650px] scale-110 rotate-90"
-                                alt="SAP6 Front View"
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex lg:flex-row min-h-screen lg:px-50 py-2 flex-col">
-                    <div className="flex flex-col lg:w-1/2 h-full text-white p-5">
+<div className="flex flex-col lg:w-1/2 h-full text-white p-5">
                         <motion.div
                             initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -148,8 +149,37 @@ const SAP6 = ({ onImageLoad, imageLoaded }) => {
                             </table>
                         </motion.div>
                     </div>
-                    <div className="w-full h-full">
-                        <img src={drone.OtherImg} className="object-cover w-full h-full" alt="SAP6" />
+
+                        <motion.img
+                            initial={{ opacity: 0, x: 50, scale: 1 }}
+                            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+                            src={drone.Isometric}
+                            className="scale-110 lg:w-1/2"
+                            alt="SAP6 Isometric View"
+                        />
+                    </div>
+                    <div className="flex lg:flex-row justify-center gap-20 items-center flex-col md:flex-row">
+                        <div>
+                            <motion.img
+                                initial={{ opacity: 0, x: 50, scale: 1 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+                                src={drone.IsoTop}
+                                className="lg:h-[650px] scale-110"
+                                alt="SAP6 Top View"
+                            />
+                        </div>
+                        <div>
+                            <motion.img
+                                initial={{ opacity: 0, x: -50, scale: 1 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+                                src={drone.IsoFront}
+                                className="lg:h-[650px] scale-110 rotate-90"
+                                alt="SAP6 Front View"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

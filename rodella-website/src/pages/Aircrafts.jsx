@@ -27,39 +27,7 @@ const Aircrafts = () => {
         <Navbar />
       </section>
 
-      {/* <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-25 min-h-screen relative">
-        <h1 className="lg:text-6xl text-white text-center md:text-5xl text-3xl underline">Standard Aeriel Platform</h1>
-        <div className="flex lg:flex-row lg:gap-5 flex-col">
-          <div className="text-neutral-200 lg:w-1/2 py-10">
-            <h1 className="lg:text-7xl font-bold mt-12 text-3xl">
-              Essential Policy
-            </h1>
-            <span className="lg:text-7xl font-bold block pt-4 text-3xl">
-              for our
-            </span>
-            <span className="lg:text-7xl text-3xl font-bold block py-4">
-              Custom
-            </span>
-            <span className="lg:text-7xl text-3xl font-bold">
-              Ariel Platform.
-            </span>
-            <p className="text-xl mt-7 text-neutral-400">Drones play a vital role in today&apos;s world by enhancing efficiency, safety, and accessibility across
-              industries.</p>
-            <p className="text-xl mt-3 text-neutral-400 mb-8">
-              Connect with us so we can deliver customised drone solutions as per your needs.
-            </p>
-            <Link className="bg-neutral-300 p-4 text-black rounded-2xl w-fit gap-2 flex flex-row items-center justify-center" to={"/contact"}>
-              Contact Us <ArrowRightIcon className="w-5 h-5" />
-            </Link>
-          </div>
-          <div className="lg:w-1/2 lg:py-10">
-            <img src={firstImage}
-              alt="SAP main image"
-              className="lg:mt-12 h-full rounded-2xl bg-neutral-950"
-            />
-          </div>
-        </div>
-      </section> */}
+
 
 <motion.div 
         initial={{ opacity: 0 }}
@@ -135,16 +103,16 @@ const Aircrafts = () => {
           </p>
           <div className="flex lg:flex-row flex-col gap-3 lg:gap-0 justify-between">
             <p className="lg:text-xl text-base text-white hover:text-neutral-400 transition duration-300">
-              ✅Pre-Flight Hardware Checks
+              Pre-Flight Hardware Checks
             </p>
             <p className="lg:text-xl text-base text-white hover:text-neutral-400 transition duration-300">
-              ✅Software & Firmware Testing
+              Software & Firmware Testing
             </p>
             <p className="lg:text-xl text-base text-white hover:text-neutral-400 transition duration-300">
-              ✅Ground Control & Communication
+              Ground Control & Communication
             </p>
             <p className="lg:text-xl text-base text-white hover:text-neutral-400 transition duration-300">
-              ✅Flight Testing
+              Flight Testing
             </p>
           </div>
         </div>
@@ -160,10 +128,10 @@ const Aircrafts = () => {
           <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
             <Squares2X2Icon className="w-30 h-30 mb-5 text-white" />
             <h1 className="font-bold text-white ml-3">
-              Volume Production
+              Highly Customisable
             </h1>
             <p className="text-neutral-300 mt-5 ml-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eaque reprehenderit error necessitatibus tenetur. Sed repellendus dignissimos molestias dolor!
+              With such robust flying machanism you can have diverse variety of payloads. We offer a range of customisation options to meet your specific needs.
             </p>
           </div>
           <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
@@ -172,11 +140,7 @@ const Aircrafts = () => {
               Reliabilty
             </h1>
             <p className="text-neutral-300 mt-5 ml-3">
-<<<<<<< HEAD
-             
-=======
-              Each product has been tensively tested and they have survived the test of time. each product boost the time a slight time of 500 + hours to ensure that it is reliable and durable.
->>>>>>> 2516d85 (Updated the SAP Page , Aircraft.jsx and content)
+              each product has been tensively tested and they have survived the test of time. each product boost the time a slight time of 500 + hours to ensure that it is reliable and durable.
             </p>
           </div>
           <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
@@ -185,10 +149,10 @@ const Aircrafts = () => {
               Robust Build
             </h1>
             <p className="text-neutral-300 mt-5 ml-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eaque reprehenderit error consequatur necessitatibus tenetur. Sed repellendus dignissimos molestias dolor!
-            </p>
-          </div>
-          <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
+               Our airframes made out of high quality composite materials and are designed to withstand the harsh conditions of the environment.
+              </p>
+            </div>
+            <div className="bg-neutral-800 p-3 rounded-lg transition-all hover:shadow-2xl shadow-neutral-700 transform hover:scale-102 duration-400">
             <WrenchScrewdriverIcon className="w-30 h-30 mb-5 text-white" />
             <h1 className="font-bold text-white ml-3">
               Highly Customisable
